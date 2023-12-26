@@ -1,0 +1,88 @@
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+*body {
+    background-color:navy;
+}
+.header{
+    border: 5px solid lightgray;
+    background-color: #555;
+    border-radius: 10px;
+    font: 48px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    padding-top: 70px;
+}
+
+.geosearch {
+    border: 5px solid lightgray;
+    border-radius: 20px;
+    background-color: grey;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 400px;
+    text-align: center;
+    color: whitesmoke;
+    margin-right: 25px;
+}
+
+.geosearch input {
+    border:0;
+    outline: 0;
+    background: #ebfffc;
+    color:#555;
+    padding: 10px 25px;
+    height: 20px;
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 16px;
+    margin-left: 16px;
+    font-size: 18;
+}
+
+.geosearch button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 40%;
+    height: 45px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.card {
+    border: 5px solid lightgray;
+    margin-top: 100px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 36px;
+    max-width: 1000px;
+    max-height: 400px;
+    
+}
+
+.card ul {
+    display: flex;
+    justify-content: space-evenly;
+    font: 20px;
+
+}
+
+.card h2 {
+    font: 20px;
+}
+
+#forecast {
+    width: 800px;
+
+}
