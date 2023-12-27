@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/stylesheet.css"
+    <link rel="stylesheet" href="assets/CSS/stylesheet.css"/>
     <title>The 5day Forecast</title>
 </head>
 <body>
@@ -13,29 +13,27 @@
     </header>
 
     <section class="container">
-        <div class="tile">
-            <div class="columns ml-4">
-                <div  class="geosearch">
-                    <h2> City Search </h2>
-                    <input id="search" type="text" placeholder="enter city name" spellcheck="false" />
-                    <button><img src="" /></button>
-                    <i class="fa-duotone fa-magnifying-glass"></i>
+        
+                <div class="geosearch">
+                    <h2> Location Search </h2>
+                    <input id="searchinput" type="text" placeholder="enter city name" spellcheck="false">
+                    <button onclick="fetchForecast()"> submit </button>
+                
                 </div>
-            </div>
-        </div>
+            
+    
 
-        <div id="forecast" class="card">   
-            <h2 class="title"> 5 Day Forecast</h2> 
-            <P> Monday Tuesday Wendsday Thursday Friday</P>
-            
-            
-       
-            
+                <div id="forecast" class="card">   
+                    <h2>5 Day Forecast</h2> 
+                    <h3 id="city"></h3>
+                    <h4 id="error"></h4> 
            
-           
-        </div>
+                </div>
 
     </section>
-    <script>assets/javascript.js</script>
+   
+    <script src="assets/JavaScript/script.js"></script>
+
+
 </body>
 </html>
