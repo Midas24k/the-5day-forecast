@@ -1,46 +1,55 @@
 const button = document.querySelector('#myBtn');
-const apiKey = '{{ec6e87ea0164d3aa60c298a1d6b303c0}};'
 
-const weatherContainer = document.getElementById('forecast');
-const city = document.getElementById('city');
-const error = document.getElementById('error');
 
-const units ='imperial';
-let temperatureSymbol = units == 'imperial' ? "°F" : "°C";
-
-async function fetchForecast() {
-    try {
-        weatherContainer.innerHTML ='';
-        error.innerHTML = '';
-        city.innerHTML ='';
-
-        const cnt = 6;
-        const searchInputtedByUser = document.getElementById('searchinput').value;
-
-        const apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={apiKey}&units=${units}&cnt=${cnt}';
-
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        console.log(27, data);
-
-        //Display error if user types invalid city or no city
-        if (data.cod == '400' || data.cod =='404') {
-            error.innerHTML = 'Not a valid city. Please input another city';
-            return;
-        }
-        //Display weather data for each 3 hour increment
-        data.list.forEach(data => {
-            const dailyWeatherData = createWeatherDescription(data);
-            weatherContainer.appendChild(dailyWeatherData)
-        });
-        //Display city name based on latitude and longitude
-        city.innerHTML = 'Daily Weather for ${data.city.name}';
-
-    } catch (error) {
-        console.log(error);
+let weather = {
+    apiKey: '6d2c5466092de2babc8fd56a62672dee',
+     fetchWeather: function (city, state, country){
+        fetch("https://api.openweathermap.org/geo/1.0/direct?q=" 
+        + city 
+        + state 
+        + country
+        + "&limit=1&appid=" 
+        + this.apiKey
+        )
+        .then((response) => response.json())
+        .then((data) => this.directionWeather(data));
+    },
+    directionWeather: function(data) {
+        const direct = [
+            {
+              "name": "",
+              "local_names": {
+                "en": "",
+                "ru": "",
+                "uk": ""
+              },
+              "lat": "",
+              "lon": "",
+              "country": "",
+              "state": ""
+            }
+          ]
+          console.log(direct);
+        //   const flattenedData = {
+        //     name: data[0].name,
+        //     en: data[0].local_names.en,
+        //     ru: data[0].local_names.ru,
+        //     uk: data[0].local_names.uk,
+        //     lat: data[0].lat,
+        //     lon: data[0].lon,
+        //     country: data[0].country,
+        //     state: data[0].state
+        //   };
+        // const {lat, lon} = data.direct[0];
+        // console.log(lat,lon)
+        // const endPointApi = 'api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon${lon}&appid=6d2c5466092de2babc8fd56a626'
+        // fetch(endPointApi, {lat, lon})
+        // .then((response) => response.json())
+        // .then((data) => console.log(data));
     }
+  
+    
 
-}
 
 
 
@@ -48,7 +57,6 @@ async function fetchForecast() {
 // function searchBtn () {
 //     console.log('button clicked');
 
-// }
+}
 
-// button.addEventListener('click', searchBtn);
-
+// button.addEventListener('click', searchBtn)

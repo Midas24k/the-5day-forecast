@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/stylesheet.css"/>
-    <title>The 5day Forecast</title>
-</head>
-<body>
-    <header class="header">
-        <h1> Work Week Forecast</h1>
-
-    </header>
-
-    <section class="container">
-        
-                <div class="geosearch">
-                    <h2> Location Search </h2>
-                    <input id="searchinput" type="text" placeholder="enter city name" spellcheck="false">
-                    <button onclick="fetchForecast()"> submit </button>
-                
-                </div>
-            
-    
-
-                <div id="forecast" class="card">   
-                    <h2>5 Day Forecast</h2> 
-                    <h3 id="city"></h3>
-                    <h4 id="error"></h4> 
-           
-                </div>
-
-    </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/CSS/stylesheet.css"/>
+        <title>The 5day Forecast</title>
+    </head>
+    <body>
+        <h1>Work Week Forecast</h1>
+        <div class="container">
+            <div class="geosearch">
+                <h3>Location Search</h3>
+                <input class="city-input" type="text" placeholder="enter city name" spellcheck="false" />
+                <button class="search-btn">Search</button>
+                <div class="divider"></div>
+                <button class="location-btn">Use Current Location</button>
+            </div>
+        </div>
    
-    <script src="assets/JavaScript/script.js"></script>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>_______ ( ______ )</h2>
+                    <h6>Temperature: __°C</h6>
+                    <h6>Wind: __ M/S</h6>
+                    <h6>Humidity: __%</h6>
+                </div>
+            </div>
 
+            <div class="weather-data">
+                <div class="current-weather">
+                    <div class="details">
+                        <h2>_______ ( ______ )</h2>
+                        <h6>Temperature: __°C</h6>
+                        <h6>Wind: __ M/S</h6>
+                        <h6>Humidity: __%</h6>
+                    </div>
+                </div>
+                <div class="days-forecast">
+                    <h2>5-Day Forecast</h2>
+                    <ul class="weather-cards">
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-</body>
+        </div>
+
+        <script src="assets/JavaScript/script.js"></script>
+    </body>
 </html>

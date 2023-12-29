@@ -1,5 +1,6 @@
 *{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
 }
 *body {
     background-color:navy;
@@ -58,7 +59,7 @@
     margin-right: 20px;
 }
 
-.card {
+.weather {
     border: 5px solid lightgray;
     margin-top: 100px;
     background: linear-gradient(135deg, #00feba, #5b548a);
@@ -66,8 +67,8 @@
     border-radius: 20px;
     text-align: center;
     font-size: 36px;
-    max-width: 1000px;
-    max-height: 400px;
+    max-width: 100vh;
+    max-height: 100vh;
     
 }
 
@@ -78,7 +79,7 @@
 
 }
 
-.card h2 {
+.weather h2 {
     font: 20px;
 }
 
