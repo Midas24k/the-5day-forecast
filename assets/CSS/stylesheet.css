@@ -1,89 +1,90 @@
 *{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-*body {
+body {
     background-color:navy;
 }
-.header{
-    border: 5px solid lightgray;
-    background-color: #555;
-    border-radius: 10px;
-    font: 48px;
+h1 {
+    background:gray;
+    font: 36px;
+    text-align: center;
+    padding: 30px;
     color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    
 }
 
 .container {
     display: flex;
-    justify-content:center;
-    flex-direction: row;
-    padding-top: 70px;
+    gap: 35px;
+    padding: 30px;
 }
 
 .geosearch {
     border: 5px solid lightgray;
     border-radius: 20px;
-    background-color: grey;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    height: 400px;
+    background-color: grey;  
     text-align: center;
     color: whitesmoke;
-    margin-right: 25px;
+    width: 550px;
 }
 
 .geosearch input {
-    border:0;
-    outline: 0;
+    border: 1px solid black;
+    outline: none;
     background: #ebfffc;
     color:#555;
-    padding: 10px 25px;
-    height: 20px;
-    border-radius: 20px;
-    flex: 1;
-    margin-right: 16px;
-    margin-left: 16px;
+    padding: 0px 17px;
+    height: 46px;
+    width:100%;
+    border-radius: 4px;
     font-size: 18;
 }
 
-.geosearch button {
-    border: 0;
-    outline: 0;
-    background: #ebfffc;
-    border-radius: 40%;
-    height: 45px;
-    cursor: pointer;
-    margin-right: 20px;
+.geosearch input:focus {
+    padding: 0 16px;
+    border: 2px solid black;
 }
 
-.weather {
-    border: 5px solid lightgray;
-    margin-top: 100px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
-    color: #fff;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 36px;
-    max-width: 100vh;
-    max-height: 100vh;
-    
-}
-
-.card ul {
+.geosearch .divider {
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #BBBBBB;
     display: flex;
-    justify-content: space-evenly;
-    font: 20px;
+    align-items: center;
+    justify-content: center;
+  }
 
+.geosearch .divider::before{
+    content: "or";
+    color: black;
+    font-size: 1.18rem;
+    padding: 0 15px;
+    margin: -4px;
+    background: #E3F2FD;
 }
 
-.weather h2 {
-    font: 20px;
+.geosearch button {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
-
-#forecast {
-    width: 800px;
-
+.geosearch .search-btn:hover {
+    background: #2c52ed;
+  }
+.geosearch .location-btn {
+    background: #6C757D;
 }
+.geosearch .location-btn:hover {
+    background: #5c636a;
+  }
+
