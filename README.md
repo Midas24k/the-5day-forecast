@@ -1,6 +1,6 @@
 The 5day Forecast
 
-##Introduction
+## Introduction
 
 Welcome to challenge 6 "utilizing the weather API". This project truly tested everything that I knew and pushed me to my limit regarding how much I could learn without assistance. During this project, I had to be extremely resourceful and motivated. This was truly a trial and error project if I have never done one myself
 
