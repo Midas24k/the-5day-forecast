@@ -61,6 +61,8 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
     }).catch(() => {
         alert("An error occurred while fetching the weather forecast!");
     });
+
+    //local storage code starts here
     // const lastcityName = cityInput.value.trim();
     // saveLastSearchedCity(cityName);
     // lastSearchedCityElement.textContent = cityName;
